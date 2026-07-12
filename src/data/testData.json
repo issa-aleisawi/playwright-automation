@@ -1,0 +1,34 @@
+{
+  "validUser": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "invalidLoginScenarios": [
+    {
+      "scenario": "No Username",
+      "username": "",
+      "password": "secret_sauce",
+      "expectedError": "Epic sadface: Username is required"
+    },
+    {
+      "scenario": "No Password",
+      "username": "standard_user",
+      "password": "",
+      "expectedError": "Epic sadface: Password is required"
+    },
+    {
+      "scenario": "Invalid Credentials",
+      "username": "wrong_user",
+      "password": "wrong_password",
+      "expectedError": "Epic sadface: Username and password do not match any user in this service"
+    }
+  ],
+  "checkoutInfo": {
+    "firstName": "Test",
+    "lastName": "User",
+    "postalCode": "11118"
+  },
+  "api": {
+    "bookId": 1
+  }
+}
