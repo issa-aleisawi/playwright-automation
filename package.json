@@ -1,0 +1,24 @@
+{
+  "name": "playwright-automation",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Playwright test automation framework covering SauceDemo (Web UI) and Simple Books API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/issa-aleisawi/playwright-automation.git"
+  },
+  "author": "Issa Aleisawi",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:headed": "playwright test --headed",
+    "test:chrome": "playwright test --project=chrome",
+    "test:firefox": "playwright test --project=firefox",
+    "report": "playwright show-report reports/html-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}

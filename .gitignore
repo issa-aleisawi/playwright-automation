@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Playwright output
+reports/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Auth state (bonus challenge output — never commit sessions)
+storageState.json
+
+# Environment & secrets
+.env
+.env.*
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
