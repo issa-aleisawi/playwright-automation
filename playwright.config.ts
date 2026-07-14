@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import testData from './src/data/testData.json';
 
 /**
  * Central Playwright configuration.
@@ -49,7 +50,7 @@ export default defineConfig({
         viewport: null,
         deviceScaleFactor: undefined,
         launchOptions: { args: ['--start-maximized'] },
-        baseURL: 'https://www.saucedemo.com',
+        baseURL: testData.baseUrls.ui,
       },
     },
     {
@@ -60,14 +61,14 @@ export default defineConfig({
         /* Firefox has no --start-maximized flag; a full-HD viewport is the
            standard equivalent for consistent full-size rendering. */
         viewport: { width: 1920, height: 1080 },
-        baseURL: 'https://www.saucedemo.com',
+        baseURL: testData.baseUrls.ui,
       },
     },
     {
       name: 'api',
       testDir: './tests/api',
       use: {
-        baseURL: 'https://simple-books-api.click',
+        baseURL: testData.baseUrls.api,
       },
     },
   ],

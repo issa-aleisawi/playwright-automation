@@ -1,4 +1,8 @@
 {
+  "baseUrls": {
+    "ui": "https://www.saucedemo.com",
+    "api": "https://simple-books-api.click"
+  },
   "validUser": {
     "username": "standard_user",
     "password": "secret_sauce"
